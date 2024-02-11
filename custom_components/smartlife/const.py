@@ -368,6 +368,12 @@ class DPCode(StrEnum):
     WORK_MODE = "work_mode"  # Working mode
     WORK_POWER = "work_power"
     ADD_ELE = "add_ele"
+    # Custom data points for PC311_W_TY
+    PC311_W_TY_VOLTAGE = "voltage"
+    PC311_W_TY_CURRENT_1 = "current_circuit_1"
+    PC311_W_TY_CURRENT_2 = "current_circuit_2"
+    PC311_W_TY_POWER_1 = "current_power_1"
+    PC311_W_TY_POWER_2 = "current_power_2"
 
 
 @dataclass

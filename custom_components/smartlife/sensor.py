@@ -736,6 +736,42 @@ SENSORS: dict[str, tuple[SmartLifeSensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfElectricPotential.VOLT,
             subkey="voltage",
         ),
+        # Additional sensors for PC311_W_TY
+        SmartLifeSensorEntityDescription(
+            key=DPCode.PC311_W_TY_VOLTAGE,
+            name="Voltage",
+            device_class=SensorDeviceClass.VOLTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfElectricPotential.VOLT,
+        ),
+        SmartLifeSensorEntityDescription(
+            key=DPCode.PC311_W_TY_CURRENT_1,
+            name="Current 1",
+            device_class=SensorDeviceClass.CURRENT,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
+        ),
+        SmartLifeSensorEntityDescription(
+            key=DPCode.PC311_W_TY_CURRENT_2,
+            name="Current 2",
+            device_class=SensorDeviceClass.CURRENT,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
+        ),
+        SmartLifeSensorEntityDescription(
+            key=DPCode.PC311_W_TY_POWER_1,
+            name="Power 1",
+            device_class=SensorDeviceClass.POWER,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+        ),
+        SmartLifeSensorEntityDescription(
+            key=DPCode.PC311_W_TY_POWER_1,
+            name="Power 1",
+            device_class=SensorDeviceClass.POWER,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+        ),
     ),
     # Circuit Breaker
     # https://developer.tuya.com/en/docs/iot/dlq?id=Kb0kidk9enyh8
